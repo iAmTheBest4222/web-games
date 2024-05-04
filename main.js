@@ -15,13 +15,18 @@ class Game {
     this.canvas.addEventListener("mousedown", e => {
       this.player.flap();
     });
+    window.addEventListener("keydown",e=>{
+      if (e.key === " " || e.key ==="Enter") {
+        this.player.flap();
+      }
+    });
   }
 
   resize(width, height) {
     this.canvas.width = width;
     this.canvas.height = height;
     this.ctx.fillStyle = "gold";
-    this.ctx.borderRadius="25px";
+    this.ctx.borderRadius = "25px";
     this.width = this.canvas.width;
     this.height = this.canvas.height;
     this.ratio = this.height / this.baseHeight;

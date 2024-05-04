@@ -17,6 +17,8 @@ class Player {
             this.speedY += this.game.gravity;
         } if (this.isTouchingBottom()) {
             this.y = this.game.height - this.height;
+            alert("WARNING [points -1]");
+            this.resize();
         }
     } resize() {
         this.width = this.spriteHeight * this.game.ratio;
@@ -25,7 +27,7 @@ class Player {
         this.speedY = -8 * this.game.ratio;
     }
     isTouchingBottom() {
-        return this.y >= this.game.height - this.height
+        return this.y >= this.game.height - this.height;
     }
     isTouchingTop() {
         return this.y <= 0;
