@@ -34,7 +34,7 @@ class Game {
     this.gravity = 0.15 * this.ratio;
     this.background.resize();
     this.player.resize();
-    this.speed=3*this.ratio;
+    this.speed=8*this.ratio;
 
   }
   render() {

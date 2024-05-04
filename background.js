@@ -9,7 +9,7 @@ class Background {
         this.scaledHeight;
     }
     update() {
-        this.x -= 0.5;
+        this.x -= 2;
         if (this.x <= -this.scaledWidth) {
             this.x = 0;
 
@@ -18,6 +18,7 @@ class Background {
     }
     draw() {
         this.game.ctx.drawImage(this.image, this.x, 0,this.scaledWidth,this.scaledHeight);
+        this.game.ctx.drawImage(this.image, this.x + this.scaledWidth, 0,this.scaledWidth,this.scaledHeight);
     } resize() {
         this.scaledWidth = this.width * this.game.ratio;
         this.scaledHeight = this.height * this.game.ratio;
