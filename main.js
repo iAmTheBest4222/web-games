@@ -20,7 +20,9 @@ class Game {
       if (e.key === " " || e.key ==="Enter") {
         this.player.flap();
       }
+      
     });
+
   }
 
   resize(width, height) {
@@ -37,6 +39,7 @@ class Game {
     this.speed=8*this.ratio;
 
   }
+  
   render() {
     this.background.update();
     this.background.draw();
