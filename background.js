@@ -2,6 +2,7 @@ class Background {
     constructor(game) {
         this.game = game;
         this.image = document.getElementById("background1");
+        this.image1 = document.getElementById("background1");
         this.image2=document.getElementById("background2");
         this.image3=document.getElementById("background3");
         this.width = 2400;
@@ -31,7 +32,13 @@ class Background {
     }
     mode(e){
         if (e==="2") {
+            this.image=this.image1;
+        }
+        if (e==="3") {
             this.image=this.image2;
+        }
+        if (e==="1") {
+            this.image=this.image3;
         }
         
     }
