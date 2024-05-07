@@ -8,6 +8,8 @@ class Game {
     this.speed;
     this.ratio = this.height / this.baseHeight;
     this.player = new Player(this);
+    this.obstacles=[];
+    this,numberOfElement=10;
     this.background=new Background(this);
     this.resize(window.innerWidth, window.innerHeight);
     window.addEventListener("resize", e => {
@@ -33,10 +35,10 @@ class Game {
     this.width = this.canvas.width;
     this.height = this.canvas.height;
     this.ratio = this.height / this.baseHeight;
-    this.gravity = 0.15 * this.ratio;
+    this.gravity = 0.2 * this.ratio;
     this.background.resize();
     this.player.resize();
-    this.speed=8*this.ratio;
+    this.speed+=20*this.ratio;
 
   }
   
@@ -46,6 +48,7 @@ class Game {
     this.player.update();
     this.player.draw();
   }
+  
 }
 ///////////////////////////////////////////////////////
 window.addEventListener("load", function () {
