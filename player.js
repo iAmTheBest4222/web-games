@@ -8,16 +8,18 @@ class Player {
         this.spriteHeight = 200;
         this.spritewidth = 200;
         this.speedY = -2;
-    } draw() {
+    } 
+    draw() {
         this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
-    } update() {
+    }
+    update() {
         //this.x++;
         this.y += this.speedY;
         if (!this.isTouchingBottom()) {
             this.speedY += this.game.gravity;
         } if (this.isTouchingBottom()) {
             this.y = this.game.height - this.height;
-            alert("WARNING [points -1]");
+            //alert("WARNING [points -1]");
             this.resize();
         }
     } resize() {
