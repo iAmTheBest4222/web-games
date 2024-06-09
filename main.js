@@ -64,8 +64,8 @@ class Game {
   }
   creatObstracals(){
     this.obstacles=[];
-    const firstX=100;
-    const obstacelSpacing=100;
+    const firstX=this.baseHeight*this.ratio;
+    const obstacelSpacing=600* this.ratio;
     for(let i=0;i<this.numberOfElement;i++){
       this.obstacles.push(new Obstacele(this,firstX+i*obstacelSpacing));
     }
