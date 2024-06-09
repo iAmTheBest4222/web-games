@@ -8,9 +8,11 @@ class Player {
         this.spriteHeight = 200;
         this.spritewidth = 200;
         this.speedY = -2;
+        this.image=document.getElementById('player_fish');
     } 
     draw() {
         this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
+        this.game.ctx.drawImage(this.image,0,0,this.spritewidth,this.spriteHeight,this.x,this.y,this.width,this.height);
     }
     update() {
         
