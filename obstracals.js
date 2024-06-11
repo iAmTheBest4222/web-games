@@ -17,7 +17,7 @@ class Obstacele {
         if (this.y<=0 || this.y>=this.game.height-this.scaledheight){
             this.speedY*=-1;
         }
-        //for the moment 
+        
     }
     
     draw(){
